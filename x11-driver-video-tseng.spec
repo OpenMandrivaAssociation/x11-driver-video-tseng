@@ -1,12 +1,25 @@
 Name: x11-driver-video-tseng
-Version: 1.1.0
-Release: %mkrel 2
+Version: 1.1.1
+Release: %mkrel 1
 Summary: The X.org driver for Tseng Cards
 Group: Development/X11
 URL: http://xorg.freedesktop.org
-Source: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-tseng-%{version}.tar.bz2
+
+########################################################################
+# git clone git://git.mandriva.com/people/pcpa/xorg/drivers/xf86-video-tseng  xorg/drivers/xf86-video-tseng
+# cd xorg/drivers/xf86-video/tseng
+# git-archive --format=tar --prefix=xf86-video-tseng-1.1.1/ master | bzip2 -9 > xf86-video-tseng-1.1.1.tar.bz2
+########################################################################
+Source0: xf86-video-tseng-%{version}.tar.bz2
+
 License: MIT
 BuildRoot: %{_tmppath}/%{name}-root
+
+########################################################################
+# git-format-patch master..origin/mandriva+gpl
+Patch1: 0001-Update-for-new-policy-of-hidden-symbols-and-common-m.patch
+########################################################################
+
 BuildRequires: x11-proto-devel >= 1.0.0
 BuildRequires: x11-server-devel >= 1.0.1
 BuildRequires: x11-util-macros >= 1.0.1
@@ -18,10 +31,11 @@ The X.org driver for Tseng Cards
 %prep
 %setup -q -n xf86-video-tseng-%{version}
 
-%build
-%configure2_5x	--x-includes=%{_includedir}\
-		--x-libraries=%{_libdir}
+%patch1 -p1
 
+%build
+autoreconf -ifs
+%configure
 %make
 
 %install
