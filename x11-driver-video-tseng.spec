@@ -29,6 +29,8 @@ The X.org driver for Tseng Cards
 %setup -q -n xf86-video-tseng-%{version}
 
 %patch1 -p1
+%patch2 -p1
+%patch3 -p1
 
 %build
 autoreconf -ifs
