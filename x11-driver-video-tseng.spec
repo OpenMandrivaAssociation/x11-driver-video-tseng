@@ -1,6 +1,6 @@
 Name: x11-driver-video-tseng
-Version: 1.1.1
-Release: %mkrel 3
+Version: 1.2.0
+Release: %mkrel 1
 Summary: The X.org driver for Tseng Cards
 Group: Development/X11
 URL: http://xorg.freedesktop.org
