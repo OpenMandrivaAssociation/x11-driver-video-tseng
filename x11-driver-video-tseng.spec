@@ -1,5 +1,5 @@
 Name: x11-driver-video-tseng
-Version: 1.2.3
+Version: 1.2.4
 Release: %mkrel 1
 Summary: X.org driver for Tseng Cards
 Group: System/X11
