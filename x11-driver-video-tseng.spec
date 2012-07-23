@@ -4,10 +4,10 @@ Name: x11-driver-video-tseng
 Version: 1.2.5
 %if 0%git
 Release: 0.%git.1
-Source: xf86-video-tseng-%git.tar.xz
+Source0: xf86-video-tseng-%git.tar.xz
 %else
-Release: 1
-Source: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-tseng-%{version}.tar.bz2
+Release: 2
+Source0: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-tseng-%{version}.tar.bz2
 %endif
 Summary: X.org driver for Tseng Cards
 Group: System/X11
