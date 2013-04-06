@@ -1,5 +1,5 @@
---- xf86-video-tseng-1.2.5/src/tseng_driver.c~	2012-07-17 05:21:17.000000000 +0000
-+++ xf86-video-tseng-1.2.5/src/tseng_driver.c	2013-03-25 13:48:54.030823202 +0000
+--- xf86-video-tseng-1.2.5/src/tseng_driver.c.0000~	2012-07-17 07:21:17.000000000 +0200
++++ xf86-video-tseng-1.2.5/src/tseng_driver.c	2013-04-06 02:54:10.282266610 +0200
 @@ -39,9 +39,6 @@
  /* All drivers initialising the SW cursor need this */
  #include "mipointer.h"
@@ -10,3 +10,11 @@
  #include "fb.h"
  
  #if GET_ABI_MAJOR(ABI_VIDEODRV_VERSION) < 6
+@@ -1453,7 +1450,6 @@ TsengScreenInit(SCREEN_INIT_ARGS_DECL)
+ 	}
+     }
+ 
+-    miInitializeBackingStore(pScreen);
+     xf86SetSilkenMouse(pScreen);
+     /* Initialise cursor functions */
+     miDCInitialize(pScreen, xf86GetPointerScreenFuncs());
