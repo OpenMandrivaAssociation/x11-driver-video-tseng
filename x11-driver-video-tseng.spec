@@ -3,7 +3,7 @@
 Summary:	X.org driver for Tseng Cards
 Name:		x11-driver-video-tseng
 Version:	1.2.5
-Release:	13
+Release:	14
 Group:		System/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
