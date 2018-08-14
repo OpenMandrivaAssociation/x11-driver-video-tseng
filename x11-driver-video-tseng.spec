@@ -21,7 +21,7 @@ x11-driver-video-tseng is the X.org driver for Tseng Cards.
 
 %prep
 %setup -qn xf86-video-tseng-%{version}
-%apply_patches
+%autopatch -p1
 # fix build on aarch64
 autoreconf -vfi
 
@@ -30,10 +30,10 @@ autoreconf -vfi
 	--x-includes=%{_includedir} \
    	--x-libraries=%{_libdir}
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc COPYING
