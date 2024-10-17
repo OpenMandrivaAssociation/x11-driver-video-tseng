@@ -6,7 +6,7 @@ Version:	1.2.5
 Release:	21
 Group:		System/X11
 License:	MIT
-Url:		http://xorg.freedesktop.org
+Url:		https://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-tseng-%{version}.tar.bz2
 Patch0:		0001-Remove-mibstore.h.patch
 Patch1:		https://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc/x11/xf86-video-tseng/patches/patch-src_tseng__driver.c
