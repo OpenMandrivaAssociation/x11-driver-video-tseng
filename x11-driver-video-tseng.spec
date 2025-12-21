@@ -11,6 +11,11 @@ Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-tseng
 Patch0:		0001-Remove-mibstore.h.patch
 Patch1:		https://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc/x11/xf86-video-tseng/patches/patch-src_tseng__driver.c
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(xorg-macros)
 BuildRequires:	pkgconfig(xproto)
 BuildRequires:	pkgconfig(xorg-server)
